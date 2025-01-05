@@ -41,7 +41,7 @@ const About = () => {
           </div>
        
 
-          <h4 className="text-lg leading-relaxed">
+          <h4 className="text-xl leading-relaxed">
             I fell in love with programming and I have at least learnt
             something, I think… <span className='text-4xl'>🤷‍♂️</span>
             <br /> <br />

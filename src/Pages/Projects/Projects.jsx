@@ -45,7 +45,7 @@ Following projects showcases my skills and experience through real-world example
                     </div>
                     <div className="flex pb-4 justify-between items-center">
                        <a href="https://simple-project-c9ba2.web.app/" target="_blank" rel="noopener noreferrer">
-                       <button className="btn btn-outline border-b-purple-700 border-b-4">Live Preview</button></a>
+                       <button className="btn btn-outline ">Live Preview</button></a>
                         <div>
                             <img
                                 className="w-8 h-8 animate-ping mx-auto duration-3000"
@@ -54,7 +54,7 @@ Following projects showcases my skills and experience through real-world example
                             />
                         </div>
                         <a href="https://github.com/SadiaAfrinMim/Assinment-_submission_prioject" target="_blank" rel="noopener noreferrer">
-                        <button className="btn btn-outline border-b-purple-700 border-b-4">View Github</button></a>
+                        <button className="btn btn-outline ">View Github</button></a>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@ Following projects showcases my skills and experience through real-world example
                     </div>
                     <div className="flex pb-4 justify-between items-center">
                         <a href="https://luminous-praline-615362.netlify.app/">
-                        <button className="btn btn-outline border-b-purple-700 border-b-4">Live Preview</button></a>
+                        <button className="btn btn-outline ">Live Preview</button></a>
                         <div>
                             <img
                                 className="w-8 h-8 animate-ping mx-auto duration-3000"
@@ -95,7 +95,7 @@ Following projects showcases my skills and experience through real-world example
                             />
                         </div>
                         <a href="https://github.com/SadiaAfrinMim/funding_project_10" target="_blank" rel="noopener noreferrer">
-  <button className="btn btn-outline border-b-purple-700 border-b-4">View Github</button>
+  <button className="btn btn-outline">View Github</button>
 </a>
 
                     </div>
@@ -128,7 +128,7 @@ Following projects showcases my skills and experience through real-world example
                     </div>
                     <div className="flex pb-4 justify-between items-center">
                         <a href="https://incredible-sable-27d213.netlify.app/donation-campaigns" target="_blank" rel="noopener noreferrer">
-                        <button className="btn btn-outline border-b-purple-700 border-b-4">Live Preview</button></a>
+                        <button className="btn btn-outline ">Live Preview</button></a>
                         <div>
                             <img
                                 className="w-8 h-8 animate-ping mx-auto duration-3000"
@@ -137,7 +137,7 @@ Following projects showcases my skills and experience through real-world example
                             />
                         </div>
                        <a href="https://github.com/SadiaAfrinMim/Cloth_Donation_project" target="_blank" rel="noopener noreferrer">
-                       <button className="btn btn-outline border-b-purple-700 border-b-4">View Github</button></a>
+                       <button className="btn btn-outline ">View Github</button></a>
                     </div>
                 </div>
             </div>

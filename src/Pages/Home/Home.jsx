@@ -9,7 +9,7 @@ import Skill from './Skill/Skill';
 
 const Home = () => {
     return (
-        <div className='space-y-12'>
+        <div className="w-11/12 mx-auto space-y-8">
             <Banner></Banner>
             <About></About>
             <Skill></Skill>

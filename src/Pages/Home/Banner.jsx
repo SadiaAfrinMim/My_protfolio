@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ComputersCanvas from '../../Component/Computer';
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhoneAlt } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
+import resume from '../../../src/assets/SADIA AFRIN MIM cv.pdf'
 
 const Banner = () => {
     const [isTyping, setIsTyping] = useState(false);
@@ -34,14 +35,14 @@ const Banner = () => {
                             </h3>
                         </div>
                         <h4 className="text-xl">
-                            Hi there! I'm a Web Developer who specializes in the MERN stack, which stands for MongoDB, Express.js, React.js, and Node.js. I enjoy creating websites and applications that look amazing and work smoothly.
+                        "I'm a Web Developer who specializes in the MERN stack, which stands for MongoDB, Express.js, React.js, and Node.js. I enjoy creating websites and applications that look amazing and work smoothly."
                         </h4>
                         <div className="flex gap-6 mt-6 sm:mt-0 ">
                             <a
                                 target="_blank"
                                 rel="noreferrer"
                                 href="https://github.com/SadiaAfrinMim"
-                                className="text-purple-600 text-3xl hover:text-black border-2 border-purple-700 rounded-full p-3 transform hover:scale-125 transition-all duration-300"
+                                className="text-purple-600 text-3xl hover:text-black border border-purple-700 rounded-full p-3 transform hover:scale-125 transition-all duration-300"
                             >
                                 <FaGithub />
                             </a>
@@ -49,7 +50,7 @@ const Banner = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 href="https://www.linkedin.com/in/sadia-afrin-mim-5198121b0/"
-                                className="text-purple-600 text-3xl hover:text-black border-2 border-purple-700  rounded-full p-3 transform hover:scale-125 transition-all duration-300"
+                                className="text-purple-600 text-3xl hover:text-black border border-purple-700  rounded-full p-3 transform hover:scale-125 transition-all duration-300"
                             >
                                 <FaLinkedin />
                             </a>
@@ -57,15 +58,17 @@ const Banner = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 href="mailto:sadiaafrinmim660@gmail.com"
-                                className="text-purple-600 text-3xl hover:text-black border-2 border-purple-700  rounded-full p-3 transform hover:scale-125 transition-all duration-300"
+                                className="text-purple-600 text-3xl hover:text-black border border-purple-700  rounded-full p-3 transform hover:scale-125 transition-all duration-300"
                             >
                                 <FaEnvelope />
                             </a>
                         </div>
                         <div className="mt-8 ">
-                            <button className="hover:bg-purple-600 border-outline border font-bold py-3 border-outline px-8 rounded-full transition duration-300 transform text-black hover:scale-105 border-b-4 border-purple-800">
+                        <a href={resume} download=''>
+                        <button className="hover:bg-purple-600 border-outline border border-purple-800 font-bold py-2 px-5 rounded-full transition duration-300 transform text-purple-700 hover:scale-105 ">
                                 Download Resume
                             </button>
+                            </a>
                         </div>
                     </div>
                 </div>

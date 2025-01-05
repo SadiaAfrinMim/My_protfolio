@@ -51,16 +51,16 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="xl:mt-12 pb-8 bg-purple-400 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
+    <div id="contact" className="xl:mt-12 bg-purple-400 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
       {/* Contact Form */}
       <motion.div className="flex-[0.75]  bg-black-100 p-8 rounded-2xl">
-        <p className="purple-gray-400 text-2xl font-bold">Feel free to contact me </p>
+        <p className="text-white text-4xl font-bold">Feel free to contact me </p>
         
 
-        <form onSubmit={handleContact} className="flex flex-col gap-6 mt-6 text-white">
+        <form onSubmit={handleContact} className="flex flex-col gap-4 mt-6 text-white">
           {/* Name Input */}
           <div className="flex flex-col gap-2">
-            <label className="font-bold text-xl">Name</label>
+            <label className=" text-xl">Name</label>
             <input
               className="border-2 focus:outline-[#413a79] px-3 py-2 text-lg rounded-md text-black"
               type="text"
@@ -74,7 +74,7 @@ const Contact = () => {
 
           {/* Email Input */}
           <div className="flex flex-col gap-2">
-            <label className="font-bold text-xl">Email</label>
+            <label className=" text-xl">Email</label>
             <input
               className="border-2 focus:outline-[#413a79] px-3 py-2 text-lg rounded-md text-black"
               type="email"
@@ -88,11 +88,11 @@ const Contact = () => {
 
           {/* Message Input */}
           <div className="flex flex-col gap-2">
-            <label className="font-bold text-xl">Write Your Message</label>
+            <label className=" text-xl">Write Your Message</label>
             <textarea
               name="message"
               placeholder="Write your message"
-              rows={6}
+              rows={4}
               className="border-2 focus:outline-[#413a79] rounded-md px-3 py-2 text-black text-lg"
               value={formData.message}
               onChange={handleInputChange}
@@ -104,7 +104,7 @@ const Contact = () => {
           <div className="flex items-center justify-center">
             <button
               type="submit"
-              className="mt-3 px-6 border border-double py-3 w-full bg-purple-700 rounded-md text-white text-xl"
+              className="mt-3 px-6 border border-double py-3 w-full btn-outline rounded-md text-white text-xl"
               disabled={isSending}
             >
               {isSending ? "Sending..." : "Send Message"}
