@@ -17,7 +17,7 @@ import Marquee from 'react-fast-marquee';
 
 const Skill = () => {
   return (
-    <div id="skills" className="text-[#060414] flex flex-col gap-8 items-center overflow-hidden py-16">
+    <div id="skills" className=" flex flex-col gap-8 items-center overflow-hidden py-16">
       <div>
         <h2 className="font-bold text-4xl flex items-center justify-center">
           <span>My Skills</span>

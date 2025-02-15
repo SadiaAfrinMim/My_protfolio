@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import router from "./Router/Router";
+import { Toaster } from "react-hot-toast";
 
 
 
@@ -15,7 +16,7 @@ import router from "./Router/Router";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     
-    
+    <Toaster position="top-right"></Toaster>
    <RouterProvider router={router} />
  
 

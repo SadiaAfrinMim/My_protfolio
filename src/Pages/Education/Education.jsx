@@ -7,7 +7,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 const Education = () => {
   return (
-    <div id="education" className="my-10 px-4 bg-gray-100 border-b-4 border-purple-500">
+    <div id="education"  className="my-10 px-4 bg-base-200 border-b-4 border-purple-500 transition-colors duration-300">
       <h1 className="text-4xl font-bold text-center py-10 ">
         Educational Qualifications
       </h1>
