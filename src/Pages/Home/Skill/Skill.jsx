@@ -21,12 +21,12 @@ const Skill = () => {
     {
       title: "Frontend Development",
       icon: <Code2 className="text-purple-600" size={24} />,
-      skills: ["HTML5", "CSS3", "JavaScript", "React", "Tailwind CSS", "Bootstrap"]
+      skills: ["HTML5", "CSS3", "JavaScript", "React","Next.js", "Tailwind CSS", "Bootstrap"]
     },
     {
       title: "Backend Development",
       icon: <Cpu className="text-pink-600" size={24} />,
-      skills: ["Node.js", "Express.js", "MongoDB", "Firebase"]
+      skills: ["Node.js", "Express.js", "MongoDB", "Firebase","Prisma ORM","postgreSQL",]
     },
     {
       title: "Tools & Technologies",

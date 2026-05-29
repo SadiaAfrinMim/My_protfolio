@@ -3,7 +3,7 @@ import { RiDownloadCloud2Line } from "react-icons/ri";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoCloseOutline } from "react-icons/io5";
-import resume from "../../src/assets/sadia CV Resume.pdf";
+
 import sadia from "../../src/assets/sadia.png";
 import { Home, User, BookOpen, Target, Briefcase, Mail, Sparkles, ChevronRight } from "lucide-react";
 
@@ -13,21 +13,20 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
-  // Update theme
+  // Google Drive resume links
+  const resumeDownloadLink = "https://drive.google.com/uc?export=download&id=1Dq_uiHdPZ6lIYlFOb8jpNBapBKEWyHJS";
+  const resumeViewLink = "https://drive.google.com/file/d/1Dq_uiHdPZ6lIYlFOb8jpNBapBKEWyHJS/view?usp=sharing";
+
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  // Track scroll for navbar style and active section
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-
-      // Determine active section based on scroll position
       const sections = navItems.map(item => item.href.substring(1));
       const scrollPosition = window.scrollY + 100;
-
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -39,7 +38,6 @@ const Navbar = () => {
         }
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -57,7 +55,6 @@ const Navbar = () => {
     { icon: <Mail size={18} />, text: "Contact", href: "#contact" },
   ];
 
-  // Smooth scroll handler
   const handleNavClick = (e, href) => {
     e.preventDefault();
     const targetId = href.substring(1);
@@ -181,17 +178,23 @@ const Navbar = () => {
           </button>
 
           {/* Premium Resume Button with animated glow */}
-          <a href={resume} download className="relative group">
+          <div className="relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-full blur-lg opacity-60 group-hover:opacity-100 group-hover:blur-xl transition-all duration-300 animate-pulse group-hover:animate-none"></div>
-            <button className="relative flex items-center gap-2 bg-base-100 hover:bg-gradient-to-r hover:from-primary hover:to-secondary text-primary hover:text-white px-5 py-2.5 rounded-full font-medium transition-all duration-300 border border-primary/20 hover:border-transparent hover:shadow-xl hover:shadow-primary/25 group-hover:scale-105 active:scale-95">
-              <span className="hidden sm:inline">Resume</span>
-              <RiDownloadCloud2Line className="text-xl group-hover:translate-y-0.5 group-hover:animate-bounce transition-transform duration-300" />
-              <ChevronRight
-                size={16}
-                className="hidden sm:inline opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300"
-              />
-            </button>
-          </a>
+            <div className="relative flex items-center gap-2 bg-base-100 hover:bg-gradient-to-r hover:from-primary hover:to-secondary text-primary hover:text-white px-5 py-2.5 rounded-full font-medium transition-all duration-300 border border-primary/20 hover:border-transparent hover:shadow-xl hover:shadow-primary/25 group-hover:scale-105 active:scale-95">
+              <a
+                href={resumeDownloadLink}
+                download="Sadia_Afrin_Mim_Resume.pdf"
+                className="flex items-center gap-2"
+              >
+                <span className="hidden sm:inline">Resume</span>
+                <RiDownloadCloud2Line className="text-xl group-hover:translate-y-0.5 group-hover:animate-bounce transition-transform duration-300" />
+                <ChevronRight
+                  size={16}
+                  className="hidden sm:inline opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </nav>
 
@@ -214,7 +217,7 @@ const Navbar = () => {
                 style={{
                   animationDelay: `${index * 100}ms`,
                   animation: isMenuOpen ? "fadeInUp 0.5s ease-out forwards" : "none",
-                  opacity: 0, // start invisible, then fade in via animation
+                  opacity: 0,
                 }}
               >
                 <span className="text-primary group-hover:text-white transition-colors group-hover:rotate-12 transform transition-transform">
@@ -227,8 +230,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Global animation keyframes – add to your global CSS if not present */}
-      <style>{`
+      {/* Add animation keyframes */}
+      <style jsx>{`
         @keyframes fadeInUp {
           from {
             opacity: 0;
@@ -238,13 +241,6 @@ const Navbar = () => {
             opacity: 1;
             transform: translateY(0);
           }
-        }
-        @keyframes spin-slow {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-        .animate-spin-slow {
-          animation: spin-slow 8s linear infinite;
         }
       `}</style>
     </header>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import myImg from '../../assets/photo_6242537220602971162_x.jpg';
+import myImg from '../../assets/my photo.jpeg';
 import { Typewriter } from 'react-simple-typewriter';
 import CodeCanvas from '../../Component/Code';
 import { useInView } from 'react-intersection-observer';
@@ -147,7 +147,7 @@ const About = () => {
         <img
           src={myImg}
           alt="Sadia Afrin Mim"
-          className="w-full h-full object-cover"
+          className="transform -rotate-12 object-full w-full"
         />
       </div>
       {/* Decorative rings */}

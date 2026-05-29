@@ -10,12 +10,16 @@ import {
   SiTypescript,
 } from 'react-icons/si';
 import { Typewriter } from 'react-simple-typewriter';
-import resume from '../../../src/assets/sadia CV Resume.pdf';
-import '../../index.css';
 import { IoCloudDownload } from 'react-icons/io5';
 
 const Banner = () => {
   const [isTyping, setIsTyping] = useState(false);
+
+  // Google Drive resume link (direct download)
+  const resumeLink = "https://drive.google.com/uc?export=download&id=1Dq_uiHdPZ6lIYlFOb8jpNBapBKEWyHJS";
+  
+  // Alternative: Open in Google Drive viewer
+  const resumeViewLink = "https://drive.google.com/file/d/1Dq_uiHdPZ6lIYlFOb8jpNBapBKEWyHJS/view?usp=sharing";
 
   // Tech stack icons with colors and labels
   const techIcons = [
@@ -24,7 +28,6 @@ const Banner = () => {
     { Icon: SiTailwindcss, label: 'Tailwind', color: 'text-cyan-500', delay: 2 },
     { Icon: SiPrisma, label: 'Prisma', color: 'text-indigo-600', delay: 3 },
     { Icon: SiReact, label: 'React', color: 'text-cyan-400', delay: 4 },
-   
   ];
 
   return (
@@ -54,7 +57,9 @@ const Banner = () => {
 
               <div className="flex-1 space-y-6">
                 {/* Greeting badge */}
-               
+                {/* <div className="inline-flex items-center gap-2 bg-primary/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <span className="text-primary text-sm font-semibold">👋 Welcome to my portfolio</span>
+                </div> */}
 
                 {/* Name with glowing effect */}
                 <div>
@@ -126,14 +131,22 @@ const Banner = () => {
                 </div>
 
                 {/* Resume download button */}
-                <div className="pt-4">
-                  <a href={resume} download>
-                    <button className="group relative overflow-hidden bg-gradient-to-r from-primary to-secondary text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-primary/50 inline-flex items-center gap-2">
+                <div className="pt-4 flex gap-4">
+                  <a href={resumeLink} download="Sadia_Afrin_Mim_Resume.pdf">
+                    <button className="group relative overflow-hidden bg-gradient-to-r from-primary to-secondary text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-primary/50 inline-flex items-center gap-2">
                       <span className="relative z-10 flex items-center gap-2">
                         Download Resume
                         <IoCloudDownload className="text-xl group-hover:animate-bounce" />
                       </span>
                       <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </button>
+                  </a>
+                  
+                  <a href={resumeViewLink} target="_blank" rel="noopener noreferrer">
+                    <button className="group relative overflow-hidden border-2 border-primary text-primary font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-primary/30 inline-flex items-center gap-2 bg-transparent hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white">
+                      <span className="relative z-10 flex items-center gap-2">
+                        View Resume
+                      </span>
                     </button>
                   </a>
                 </div>
@@ -147,7 +160,7 @@ const Banner = () => {
             {techIcons.map(({ Icon, label, color }, index) => (
               <div
                 key={label}
-                className={`absolute ${color} text-4xl animate-float-${index + 1}`}
+                className={`absolute ${color} text-4xl`}
                 style={{
                   left: `${15 + index * 12}%`,
                   top: `${10 + index * 10}%`,
@@ -174,6 +187,36 @@ const Banner = () => {
           </div>
         </div>
       </div>
+
+      {/* Add animation keyframes */}
+      <style jsx>{`
+        @keyframes float-1 {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        @keyframes float-2 {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-15px) rotate(-5deg); }
+        }
+        @keyframes float-3 {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-25px) rotate(3deg); }
+        }
+        @keyframes float-4 {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-10px) rotate(-3deg); }
+        }
+        @keyframes float-5 {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-30px) rotate(4deg); }
+        }
+        
+        .animate-float-1 { animation: float-1 6s ease-in-out infinite; }
+        .animate-float-2 { animation: float-2 7s ease-in-out infinite; }
+        .animate-float-3 { animation: float-3 8s ease-in-out infinite; }
+        .animate-float-4 { animation: float-4 5s ease-in-out infinite; }
+        .animate-float-5 { animation: float-5 9s ease-in-out infinite; }
+      `}</style>
     </section>
   );
 };
